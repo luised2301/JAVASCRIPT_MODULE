@@ -18,9 +18,10 @@ Por ejemplo:
     Quitamos los espacios*/
 
     const word = prompt ("Escribe una oracion para determinar si es palindromo: ");
-
+    let worIsPalindrome = ""
     function isPalindrome(a){
         let wordLength = a.length;
+        
         console.log (`Tu palabra es: "${a}" y tiene ${wordLength} caracteres`);
 
         
@@ -28,16 +29,17 @@ Por ejemplo:
 
 
             if ((word.charAt(index))!=(word.charAt(wordLength-index-1))){
-                console.log("tu palabra no es palindromo")
+                worIsPalindrome ="No"
                 break
             }
             else{
-                console.log("tu palabra es palindromo")
+                worIsPalindrome ="Si"
               
             }
         }
-        
+        return worIsPalindrome;
 
     }
 
     isPalindrome(word);
+    console.log (`Tu palabra ${worIsPalindrome} es palindromo`);
