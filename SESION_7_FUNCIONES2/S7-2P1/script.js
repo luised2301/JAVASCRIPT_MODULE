@@ -6,4 +6,17 @@ Arrojar un alert con el resultado
 -> convertTemp() -> 'Faltan datos'
 */
 
-const tempConv
+const temp = parseInt(prompt ("Escribe la temperatura de tu localidad en grados Centigrados: "));
+
+if (temp== NaN) {
+    alert("Faltan Datos");    
+}
+
+else
+function convToFarenheit(a) {
+     
+    return (a*(9/5))+32;   
+}
+let tempFar= convToFarenheit (temp);
+
+alert(tempFar);
