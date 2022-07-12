@@ -8,16 +8,14 @@
 *
 * Pista / Hint, debemos iterar el array */
 
-let numbers = [1,4,56,7,88,4,3,6,7,3,3,5,7,8,4,6,8,5,7]
-let pairedNumbers = []
+const numbers = [1,4,56,7,88,4,3,6,7,3,3,5,7,8,4,6,8,5,7]
+const pairedNumbers = []
 console.log(`Mi arreglo tiene los siguientes valores: ${numbers}`);
 
 function arrayPair(a,b) {
-    for (let index = 0; index < a.length; index++) {
-        let element = a[index];
-        if ((element%2)==0) {
-        b.push(a[index]);
-            
+    for (let i = 0; i < a.length; i++) {
+        if ((a[i]%2)==0) {
+        b.push(a[i]);
         }
     }
 }

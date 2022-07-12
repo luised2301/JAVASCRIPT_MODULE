@@ -7,17 +7,15 @@
 *
 * Pista / Hint, debemos iterar el array */
 
-let strings = ["este","es mi","arreglo" ,"de","strings"]
+let strings = ["este","es mi","arreglo" ,"de","strings", "prueba","prueba de nuevo"]
 let endsStrings = []
 
 console.log(`Mi arreglo tiene los siguientes valores: ${strings}`);
 
 function endsArray(a,b) {
-    for (let index = 0; index < a.length; index++) {
-        let element = a[index];
-        let stringLengt = element.length;
-        let elementend = stringLengt-1
-        b.push( a[index].charAt(0) + a[index].charAt(elementend))    
+    for (let i = 0; i < a.length; i++) {
+        let element = a[i];
+        b.push( a[i].charAt(0) + a[i].charAt(element.length-1))    
         }
     }
 
