@@ -70,16 +70,16 @@ onmouseenter
 const mouseArea = document.querySelector("#mouse_area");
 const imgHolder = document.querySelector("#img_holder");
 
-mouseArea.addEventListener( 'mouseenter', ()=>{
+mouseArea.addEventListener( 'mouseover', ()=>{
     console.log("muestra gif");
     imgHolder.innerHTML = `<iframe src="https://giphy.com/embed/eIyLWKRBIuKOKdKMjL" width="480" height="370">`;
 
 
 });
 mouseArea.addEventListener( 'mouseout', ()=>{
-    console.log("oculta gif despues de 2 segundos");
+    console.log("oculta gif despues de 3 segundos");
     setTimeout(()=>{
         imgHolder.innerHTML = ``;;
-    }, 5000);
+    }, 3000);
 
 });
