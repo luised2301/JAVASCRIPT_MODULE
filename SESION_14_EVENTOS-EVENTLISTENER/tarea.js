@@ -343,7 +343,7 @@ const filterUSers = (str) => {
   return usuariosFiltrados
 }
 
-//Se hace la construccion de la tabla en HTML//
+// ? Se hace la construccion de la tabla en HTML con la info del Array original//
 
 let tableBody = document.querySelector("#table_body")
 
@@ -374,7 +374,7 @@ let input = document.querySelector('.input_text')
 let findInput = document.querySelector('#find_input')
 
 
-// ? Agregando evento "click" al boton para ejecutar el filtrado cuando se detono el mismo
+// ? Agregando evento "input" al boton para ejecutar el filtrado cuando se detono el mismo
 findInput.addEventListener('input', () =>{
   let strToFilter = input.value
   console.log(strToFilter)
@@ -388,6 +388,8 @@ findInput.addEventListener('input', () =>{
     // ? Imprimiendo el resultado en consola 
    console.log(result)
 
+
+    // ? Con esta funcion se reconstruye la tabla con el filtrado de texto   
    let tableInfofiltered = result.reduce((ac,cv, i)=>{
     cv = `
     <tr>
