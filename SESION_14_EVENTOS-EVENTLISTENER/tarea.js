@@ -66,7 +66,7 @@ cv = `
 <td>${users.users[i].username}</td>
 <td>${users.users[i].email}</td>
 </tr>`
-console.log(ac)
+
 return ac+cv
 },"");
 
