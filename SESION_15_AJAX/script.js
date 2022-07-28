@@ -84,5 +84,31 @@
     
     tableBody.innerHTML = tableInfo
     
+    const CreateUser = (user)=>{
+        const httRequest = new XMLHttpRequest()
 
+        httRequest.onload = (e) =>{
+            console.log(e.target.responseText)
+        }
+        httRequest.open ("POST","https://luiserdz-database-default-rtdb.firebaseio.com/post.json", false)
+
+        let userJson = JSON.stringify(user)
+        
+        httRequest.send(userJson)   
+    }
+
+
+
+
+
+
+//? Con esto se crean 10 post en mi DB
+// for (let index = 1; index < 11; index++) {
+//     const postToCreate = {
+//     titulo: `Este es mi post numero ${index}` ,
+//     Body: "yo soy en contenido del post y puedo tener muchos caracteres" ,
+//     Date: `${index}/27/22`
+//     }
+//     CreateUser(postToCreate)
     
+// }
